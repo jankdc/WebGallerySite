@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web3D | Virtual Museum</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="author" content="98136">
+  <meta name="description" content="A virtual museum of telecommunications.">
+  <link rel="stylesheet" href="http://x3dom.org/download/1.6.2/x3dom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="http://x3dom.org/download/1.6.2/x3dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.2/enquire.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <div id="misc-btn-wrapper">
+    <div id="misc-btn"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
+  </div>
+
+  <header>
+    <h1 id="main-title" class="fade-in one">Virtual Museum</h1>
+    <h2 id="choose-msg" class="fade-in two">Choose an Item</h2>
+    <nav id="main-menu" class="fade-in two">
+      <ul>
+        <li data-model-name="candle" class="model-icon g-color hvr-glow">
+          <img src="data/icons/candle.svg">
+        </li>
+        <li data-model-name="rotary" class="model-icon y-color hvr-glow">
+          <img src="data/icons/rotary.svg">
+        </li>
+        <li data-model-name="mobile" class="model-icon b-color hvr-glow">
+          <img src="data/icons/mobile.svg">
+        </li>
+        <li data-model-name="iphone" class="model-icon r-color hvr-glow">
+          <img src="data/icons/iphone.svg">
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="model-switch-wrapper">
+      <input id="model-switch" type="checkbox" data-on-text="3D" data-off-text="Reference" checked data-animate='false'>
+    </section>
+    <section id="model-2d-content">
+      <div id="candle-gallery" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#candle-gallery" data-slide-to="0" class="active"></li>
+          <li data-target="#candle-gallery" data-slide-to="1"></li>
+          <li data-target="#candle-gallery" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="data/images/candlestick-rusty.jpg" alt="Rusty Candlestick [800x400]">
+          </div>
+          <div class="item">
+            <img src="data/images/ernea-boss.jpg" alt="Ernea Stick [800x400]">
+          </div>
+          <div class="item embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cXxP3eQiTQI"></iframe>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#candle-gallery" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#candle-gallery" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <div id="rotary-gallery" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#rotary-gallery" data-slide-to="0" class="active"></li>
+          <li data-target="#rotary-gallery" data-slide-to="1"></li>
+          <li data-target="#rotary-gallery" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="data/images/black-rotary-phone.jpg" alt="Black Rotary Phone [800x400]">
+          </div>
+          <div class="item">
+            <img src="data/images/rotary-vintage.jpg" alt="Rotary Vintage [800x400]">
+          </div>
+          <div class="item embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cXxP3eQiTQI"></iframe>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#rotary-gallery" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#rotary-gallery" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <div id="mobile-gallery" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#mobile-gallery" data-slide-to="0" class="active"></li>
+          <li data-target="#mobile-gallery" data-slide-to="1"></li>
+          <li data-target="#mobile-gallery" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="data/images/motorola_dynatac_white.jpg" alt="Motorola DynaTAC White [800x400]">
+          </div>
+          <div class="item">
+            <img src="data/images/man-dynatac.jpg" alt="Man DynaTAC [800x400]">
+          </div>
+          <div class="item embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0WUF3yjgGf4"></iframe>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#mobile-gallery" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#mobile-gallery" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <div id="iphone-gallery" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#iphone-gallery" data-slide-to="0" class="active"></li>
+          <li data-target="#iphone-gallery" data-slide-to="1"></li>
+          <li data-target="#iphone-gallery" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="data/images/iphone5s.jpg" alt="iPhone 5s [800x400]">
+          </div>
+          <div class="item">
+            <img src="data/images/iphone-colors.jpg" alt="iPhone Colors [800x400]">
+          </div>
+          <div class="item embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="http://player.vimeo.com/video/36969812"></iframe>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#iphone-gallery" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#iphone-gallery" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+    <section id="model-3d-content">
+      <x3d id="viewport" width="400px" height="450px" showProgress='true'>
+        <scene>
+          <navigationInfo id="model-nav-info" type="examine" headlight="false"></navigationInfo>
+          <inline id="model-inline-data" nameSpaceName="museum" mapDEFToID="true" url=""></inline>
+        </scene>
+      </x3d>
+      <div id="viewport-options" class="panel panel-default">
+        <nav>
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#modelling" data-toggle="tab">Modelling</a></li>
+            <li><a href="#navigation" data-toggle="tab">Navigation</a></li>
+            <li><a href="#screenshot" data-toggle="tab">Screenshot</a></li>
+          </ul>
+        </nav>
+        <div class="tab-content">
+          <div id="modelling" class="tab-pane active">
+            <h3>Render Mode:</h3>
+            <div class="btn-group-sm">
+              <button class="btn btn-default render-btn" type="button" data-render-id="0">Realistic</button>
+              <button class="btn btn-default render-btn" type="button" data-render-id="1">Vertices</button>
+              <button class="btn btn-default render-btn" type="button" data-render-id="2">Wireframe</button>
+            </div>
+            <h3>Animation Mode:</h3>
+            <div class="btn-group-sm">
+              <button class="btn btn-default interp-btn" type="button" data-interp-name="NoneAnimation">None</button>
+              <button class="btn btn-default interp-btn" type="button" data-interp-name="SpinAnimation">Spin</button>
+            </div>
+            <h3>Lighting Mode:</h3>
+            <div class="btn-group-sm">
+              <button class="btn btn-default lights-btn" type="button" data-lights="[0,1,2,3]">All</button>
+              <button class="btn btn-default lights-btn" type="button" data-lights="[0]">Sky</button>
+              <button class="btn btn-default lights-btn" type="button" data-lights="[1]">Point</button>
+              <button class="btn btn-default lights-btn" type="button" data-lights="[2]">Spot</button>
+              <button class="btn btn-default lights-btn" type="button" data-lights="[3]">Headlight</button>
+              <button class="btn btn-default lights-btn" type="button" data-lights="[]">None</button>
+            </div>
+          </div>
+          <div id="navigation" class="tab-pane">
+            <h3>Navigation Mode:</h3>
+            <div class="btn-group-sm">
+              <button class="btn btn-default viewpt-btn" type="button" data-nav-name="examine">Examine</button>
+              <button class="btn btn-default viewpt-btn" type="button" data-nav-name="fly">Fly</button>
+              <button class="btn btn-default viewpt-btn" type="button" data-nav-name="helicopter">Heli</button>
+              <button class="btn btn-default viewpt-btn" type="button" data-nav-name="lookat">Look</button>
+              <button class="btn btn-default viewpt-btn" type="button" data-nav-name="turntable">Turn</button>
+            </div>
+            <h3>Camera Mode:</h3>
+            <div class="btn-group-sm">
+              <button class="btn btn-default camera-btn" type="button" data-cam-name="Home">Home</button>
+              <button class="btn btn-default camera-btn" type="button" data-cam-name="Side">Left</button>
+              <button class="btn btn-default camera-btn" type="button" data-cam-name="Front">Front</button>
+              <button class="btn btn-default camera-btn" type="button" data-cam-name="Top">Top</button>
+            </div>
+          </div>
+          <div id="screenshot" class="tab-pane">
+            <button id="screenshot-btn" type="button" class="btn btn-danger btn-lg">Take A Screenshot</button>
+            <div id="screenshot-out" class="alert alert-success">
+              <a href="#" class="alert-link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="model-description">
+      <h2>Description</h2>
+      <div id="mobile-description">
+        <p>World's First Commercial Portable Cellular Phone Sep 21, 1983 The world's first commercial handheld cellular phone, the Motorola DynaTAC phone, received approval from the U.S. Federal Communications Commission on September 21, 1983. The 28-ounce (794-gram) phone became available to consumers in 1984.</p>
+      </div>
+      <div id="iphone-description">
+        <p>The history of iPhones began in 2005 when Apple CEO Steve Jobs' directed the engineers with  Apple to investigate touchscreens. This is how the development of the iPhone began. He wanted to shift the focus of the buyer from the iPad, and towards a phone. During a cautious collaboration with ATnT Mobility, Apple made the device over thirty months. An approximate 150 million US dollars are said to have been spent on the project.</p>
+        <p>The original iPhone was made of aluminum with a black plastic back, while the iPhone 3G and 3GS support a complete plastic back to enhance the power of the GSM signals. The iPhone 4 features an aluminosilicate glass front and the back has a stainless steel edge serving as the antennas.</p>
+      </div>
+      <div id="rotary-description">
+        <p>After the first commercial telephone exchange was installed in 1878, the need for an automated, user-controlled method of directing a telephone call became apparent. Addressing the technical shortcomings, Almon Brown Strowger invented a telephone dial in 1891.</p>
+        <p>A rotary dial telephone was a popular type of phone design throughout the 20th century. This communication device dials numbers in a very different way to the more modern push-button systems we’re familiar with today, requiring the user to rotate a numbered dial to key in digits rather than press a series of buttons.</p>
+        <p>The rotary dial works on a pulse-based system. The frequency of pulses is determined by the number on the
+        dial which the caller selects, with the user manually turning the dial to a fixed point with their finger before releasing it. This causes the dial to return to its starting position due to an internal recoil spring, while simultaneously generating a series of electrical pulses that interrupt the flow of current on the telephone’s line. These pulses correspond to the digit selected, so if the user rotates the dial from, say, ‘7’, then seven pulses will be sent down the line to the switching office.</p>
+      </div>
+      <div id="candle-description">
+        <p>The next desk telephone developed for the Bell System following the Western Electric No. 10 was the first tube shaft candlestick desk phone. Patented in 1904, the Western Electric No. 20 series came into widespread service. The No. 20B, which is today often referred to as the 1904 candlestick, is characterized by a solid perch with the transmitter unit attached to it with a bolt and a 1 1/8 inch diameter knurled "thumb-wheel" nut.</p>
+        <p>The earliest production phones of this series used the wooden base plates of the No. 10 phones which were attached to a "pot metal" stem bolt by two screws. Later production phones and subsequent refurbished phones had cloth covered metal covers and three screws were used, the middle screw holding the stem in place. In earlier versions, the stem was secured by a single screw located on the tubal shaft about an inch from the top of the base on the right hand side of the phone.</p>
+        <p>The 20B phone had only a single wire connecting from the internal contacts to the transmitter. This wire was routed externally from the transmitter through an insulated hole in the transmitter back cup. The wire then re-entered the phone through a centered hole in the top of the solid perch leading to the spring contacts. The other electrode of the transmitter was in contact with the metal of the phone which served as the second conductor.</p>
+        <p>The old style No. 122 external-terminal receiver (commonly called a "pony receiver") and a No. 229 solid-back transmitter.</p>
+      </div>
+    </section>
+    <section id="model-comments">
+      <h2>Comments</h2>
+      <div id="disqus_thread"></div>
+    </section>
+  </main>
+
+  <footer>
+    <h2>About</h2>
+    <p>This website shows the evolution of telecommunications using both 2D (images and videos) and 3D (X3D) content. Starting from the candle stick telephone to the iconic iPhone, this website will allow users to interact and learn each item's history and features.</p>
+    <p>Furthermore, this website heavily uses JavaScript and CSS3 for full interactivity, so please use a compatible browser.</p>
+    <h2>Statement of Originality</h2>
+    These web pages are submitted as part requirement for the degree of Computer Science at the University of Sussex.  They are the product of my own labour except where indicated in the web page content. These web pages or contents may be freely copied and distributed provided the source is acknowledged.
+    <h2>References</h2>
+    <h3>Third Party Libraries</h3>
+    <ul>
+      <li><a target="_blank" href="http://getbootstrap.com">Bootstrap</a></li>
+      <li><a target="_blank" href="http://www.bootstrap-switch.org/">Bootstrap Switch</a></li>
+      <li><a target="_blank" href="http://ftlabs.github.io/fastclick">FastClick</a></li>
+      <li><a target="_blank" href="http://ianlunn.github.io/Hover/">Hover</a></li>
+      <li><a target="_blank" href="https://jquery.com">jQuery</a></li>
+      <li><a target="_blank" href="https://disqus.com">Disqus</a></li>
+    </ul>
+    <h3>Images</h3>
+    <ul>
+      <li><a target="_blank" href="http://www.telephonecollecting.org/Bobs%20phones/images/Collection/KellogCandlestick2.jpg">Rusty Candlestick Phone</a></li>
+      <li><a target="_blank" href="http://images4.mygola.com/6b97c270df8335b7e7d717f1676c6793_1394118197_l.jpg">Man Holding a Candlestick</a></li>
+      <li><a target="_blank" href="http://technoblimp.com/tag/motorola-dynatac-8000x/">A Black and White Dynatac</a></li>
+      <li><a target="_blank" href="http://www.independent.co.uk/life-style/gadgets-and-tech/features/40-years-of-the-mobile-phone-8560567.html?action=gallery">Martin Cooper, holding a Dynatac</a></li>
+      <li><a target="_blank" href="http://7428.net/wp-content/uploads/2013/08/White-iPhone-5-Vector.jpg">iPhone 5s</a></li>
+      <li><a target="_blank" href="http://grafmag.pl/static/2013/10/3D-View-iPhone-5C-Psd-Vector-Mockup.jpg">iPhone 5c Collection</a></li>
+      <li><a target="_blank" href="http://galleryhip.com/1960s-wall-telephone.html">Black Rotary Telephone</a></li>
+      <li><a target="_blank" href="http://fc02.deviantart.net/fs13/f/2007/053/9/7/Vintage_Rotary_Phone_by_ThirstyEye.jpg">Another Black Rotary Telephone</a></li>
+    </ul>
+    <h3>Text Descriptions</h3>
+    <ul>
+      <li><a target="_blank" href="http://www.antiquetelephonehistory.com/we20b.html">Candlestick</a></li>
+      <li><a target="_blank" href="http://en.wikipedia.org/wiki/Rotary_dial">Rotary Telephone</a></li>
+      <li><a target="_blank" href="http://www.4-traders.com/MOTOROLA-SOLUTIONS-INC-7130472/news/Motorola-Solutions-Inc--Motorola-Solutions-Celebrates-Its-85th-Anniversary-17296360/">DynaTAC</a></li>
+      <li><a target="_blank" href="http://www.iphonepilot.com/history-of-iphones.html">iPhone</a></li>
+    </ul>
+    <div id="download-btn">
+      <a href="data/archive/models.zip"><button id="screenshot-btn" type="button" class="btn btn-danger btn-lg">Download 3D Models</button></a>
+    </div>
+
+  </footer>
+
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'web3d-virtualmuseum';
+    var disqus_identifier = '23';
+    var disqus_title = 'Web3D Virtual Museum';
+    var disqus_url = 'http://users.sussex.ac.uk/~jkd25/WebGallerySite';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script');
+        dsq.async = true;
+        dsq.type = 'text/javascript';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] ||
+         document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+</body>
+</html>
+
